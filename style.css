@@ -75,3 +75,27 @@ body {
   padding: 10px;
   background: black;
 }
+#jumpscare {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#jumpscare img {
+  width: 120%;
+  max-width: none;
+  animation: scareZoom 0.3s ease-in;
+}
+
+@keyframes scareZoom {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
