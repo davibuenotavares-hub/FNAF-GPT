@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Vigia Noturno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+
+  <!-- ESCRITÓRIO -->
+  <div id="office">
+    <div class="door left" onclick="toggleDoor('left')">
+      <span id="doorLeftStatus">Porta E: Aberta</span>
+    </div>
+
+    <div class="door right" onclick="toggleDoor('right')">
+      <span id="doorRightStatus">Porta D: Aberta</span>
+    </div>
+
+    <button id="openCams" onclick="toggleCameras()">📷 Câmeras</button>
+  </div>
+
+  <!-- TABLET DAS CÂMERAS -->
+  <div id="cameras">
+    <p id="cameraName">Sala Principal</p>
+    <p id="enemyStatus"></p>
+
+    <div id="camControls">
+      <button onclick="prevCamera()">◀</button>
+      <button onclick="toggleCameras()">Fechar</button>
+      <button onclick="nextCamera()">▶</button>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <span id="time">12:00 AM</span>
+    <span id="energy">Energia: 100%</span>
+  </div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
