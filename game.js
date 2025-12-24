@@ -79,8 +79,7 @@ function enemyAI() {
       (springbonnie.position === 0 && !doors.left) ||
       (springbonnie.position === 2 && !doors.right)
     ) {
-      alert("Springbonnie entrou!");
-      location.reload();
+      showJumpscare();
     } else {
       springbonnie.position = 3;
     }
@@ -100,3 +99,10 @@ setInterval(() => {
 
   updateHUD();
 }, 1000);
+function showJumpscare() {
+  document.getElementById("jumpscare").style.display = "flex";
+
+  setTimeout(() => {
+    location.reload();
+  }, 800);
+}
